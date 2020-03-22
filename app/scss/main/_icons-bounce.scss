@@ -1,0 +1,242 @@
+.icon-bounce {
+  display: block;
+  width: 151px;
+  height: 151px;
+  position: absolute;
+  will-change: left, top;
+  -webkit-animation: moveX 7s linear 0s infinite alternate,
+    moveY 8s linear 0s infinite alternate, spin 8s linear 0s infinite;
+  animation: moveX 7s linear 0s infinite alternate,
+    moveY 8s linear 0s infinite alternate, spin 8s linear 0s infinite;
+  background-position: center;
+  animation-delay: 1s;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  left: 0;
+  top: 0;
+}
+
+@media (max-width: 767.98px) {
+  .icon-bounce {
+    width: 95px;
+    height: 95px;
+    -webkit-animation: moveX-sm 7s linear 0s infinite alternate,
+      moveY-sm 8s linear 0s infinite alternate, spin 8s linear 0s infinite;
+    animation: moveX-sm 7s linear 0s infinite alternate,
+      moveY-sm 8s linear 0s infinite alternate, spin 8s linear 0s infinite;
+  }
+}
+
+.animation-paused {
+  -webkit-animation-play-state: paused;
+}
+
+@-webkit-keyframes moveX {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100% - 151px);
+  }
+}
+
+@keyframes moveX {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100% - 151px);
+  }
+}
+
+@-webkit-keyframes moveX-sm {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100% - 95px);
+  }
+}
+
+@keyframes moveX-sm {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100% - 95px);
+  }
+}
+
+@-webkit-keyframes moveY {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(100% - 151px);
+  }
+}
+
+@keyframes moveY {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(100% - 151px);
+  }
+}
+
+@-webkit-keyframes moveY-sm {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(100% - 95px);
+  }
+}
+
+@keyframes moveY-sm {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(100% - 95px);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0) translateZ(0);
+    transform: rotate(0) translateZ(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateZ(0);
+    transform: rotate(360deg) translateZ(0);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0) translateZ(0);
+    transform: rotate(0) translateZ(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateZ(0);
+    transform: rotate(360deg) translateZ(0);
+  }
+}
+
+.icon-bounce-alt {
+  display: block;
+  width: 168px;
+  height: 168px;
+  position: absolute;
+  border-radius: 50%;
+  will-change: right, bottom;
+  -webkit-animation: moveX2 10s linear 0s infinite alternate,
+    moveY2 7.5s linear 0s infinite alternate, spin 9.5s linear 0s infinite;
+  animation: moveX2 10s linear 0s infinite alternate,
+    moveY2 7.5s linear 0s infinite alternate, spin 9.5s linear 0s infinite;
+  background-position: center;
+  animation-delay: 1s;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  right: 0;
+  bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+  .icon-bounce-alt {
+    width: 105px;
+    height: 105px;
+    -webkit-animation: moveX2-sm 10s linear 0s infinite alternate,
+      moveY2-sm 7.5s linear 0s infinite alternate, spin 9.5s linear 0s infinite;
+    animation: moveX2-sm 10s linear 0s infinite alternate,
+      moveY2-sm 7.5s linear 0s infinite alternate, spin 9.5s linear 0s infinite;
+  }
+}
+
+@-webkit-keyframes moveX2 {
+  from {
+    right: 0;
+  }
+  to {
+    right: calc(100% - 168px);
+  }
+}
+
+@keyframes moveX2 {
+  from {
+    right: 0;
+  }
+  to {
+    right: calc(100% - 168px);
+  }
+}
+
+@-webkit-keyframes moveX2-sm {
+  from {
+    right: 0;
+  }
+  to {
+    right: calc(100% - 105px);
+  }
+}
+
+@keyframes moveX2-sm {
+  from {
+    right: 0;
+  }
+  to {
+    right: calc(100% - 105px);
+  }
+}
+
+@-webkit-keyframes moveY2 {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: calc(100% - 168px);
+  }
+}
+
+@keyframes moveY2 {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: calc(100% - 168px);
+  }
+}
+
+@-webkit-keyframes moveY2-sm {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: calc(100% - 105px);
+  }
+}
+
+@keyframes moveY2-sm {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: calc(100% - 105px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .icon-bounce-alt {
+    z-index: 2 !important;
+  }
+
+  .icon-bounce {
+    z-index: -2 !important;
+  }
+}

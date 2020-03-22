@@ -1,0 +1,59 @@
+# Security Headers
+<IfModule mod_headers.c>
+	Header set X-XSS-Protection "1; mode=block"
+	Header set X-Frame-Options "SAMEORIGIN"
+	Header set X-Content-Type-Options "nosniff"
+	Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google.com *.gstatic.com pagead2.googlesyndication.com adservice.google.ru www.googletagservices.com; style-src 'self' 'unsafe-inline' www.google.com; img-src 'self' data: *.googlesyndication.com *.google.com; media-src 'self'; frame-src 'self' *.google.com *.gstatic.com *.youtube.com googleads.g.doubleclick.net; font-src 'self' data: fonts.gstatic.com; connect-src 'self' www.google.com *.gstatic.com;"
+	Header set Referrer-Policy "same-origin"
+	Header set Feature-Policy "geolocation 'self'; vibrate 'none'"
+</IfModule>
+
+RewriteEngine on
+
+ # Disable server signature
+Header unset Pragma
+Header unset Last-Modified
+Header unset Cache-Control
+
+RewriteRule ^([^.?]+)$ %{REQUEST_URI}.php [L]
+
+RewriteCond %{THE_REQUEST} "^[^ ]* .?.php[? ].$"
+
+RewriteRule .* - [L,R=404]
+
+
+RewriteCond %{SERVER_PORT} !^443$ 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+
+RewriteCond %{REQUEST_URI} ^(.*)/index\.html$
+RewriteRule ^(.*)index\.html$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+
+<ifModule mod_headers.c>
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=43200"
+    </FilesMatch>
+    <FilesMatch "\.(js|css|txt)$">
+        Header set Cache-Control "max-age=22604800"
+    </FilesMatch>
+    #cache imgs
+    <FilesMatch "\.(woff|woff2|svg|ico|gif|jpg|jpeg|png)$">
+        Header set Cache-Control "max-age=222592000"
+    </FilesMatch>
+    #disable cache
+    <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+        Header unset Cache-Control
+    </FilesMatch>
+</IfModule>
+ 
+<IfModule mod_setenvif.c>
+  BrowserMatch "MSIE" force-no-vary
+  BrowserMatch "Mozilla/4.[0-9]{2}" force-no-vary
+</IfModule>
+
+
+
