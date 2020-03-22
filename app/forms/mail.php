@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 $website = 'New Wave Devs';
-$email = 'vteccb@gmail.com';
+$email = 'requests@newwavedevs.com';
 
 $_POST = filter_var_array($_POST, array(
     "name" => FILTER_SANITIZE_ENCODED,
