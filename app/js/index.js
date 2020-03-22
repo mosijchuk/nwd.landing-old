@@ -123,18 +123,18 @@ $(document).ready(function() {
   });
 });
 
-// $(document).ready(function() {
-//   if ($(window).width() > 575) {
-//     $(window).scroll(function() {
-//       if ($(this).scrollTop() < 4700) {
-//         $(".img-reveal").hide();
-//       } else {
-//         $(".img-reveal").show();
-//         $(this).off();
-//       }
-//     });
-//   }
-// });
+$(document).ready(function() {
+  if ($(window).width() > 575) {
+    $(window).scroll(function() {
+      if ($(this).scrollTop() < 2000) {
+        $(".img-reveal").hide();
+      } else {
+        $(".img-reveal").show();
+        $(this).off();
+      }
+    });
+  }
+});
 
 (function(w, d, s, l) {
   w[l] = w[l] || [];
