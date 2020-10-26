@@ -1,7 +1,7 @@
 .team {
   padding-left: 24%;
   // padding-top: 201px;
-  padding-top: 0;
+  padding-top: 188px;
 
   &__heading {
     font-size: 54px;
@@ -144,8 +144,7 @@
 
 @media screen and (max-width: 574px) {
   .team {
-    padding: 70px 25px 0 25px;
-    padding-top: 0;
+    padding: 70px 25px;
 
     &__heading {
       font-size: 34px;

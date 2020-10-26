@@ -38,7 +38,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="images/src/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="css/main.min.css?v5" />
+  <link rel="stylesheet" href="css/main.min.css?v3" />
 </head>
 
 <body>
@@ -68,9 +68,9 @@
             <li>
               <a class="mobile-nav__list--item" href="#services">Services</a>
             </li>
-            <!-- <li>
+            <li>
               <a class="mobile-nav__list--item" href="#projects-mobile">Projects</a>
-            </li> -->
+            </li>
             <li><a class="mobile-nav__list--item" href="#team">Team</a></li>
             <li>
               <a class="mobile-nav__list--item" href="#contacts">Contacts</a>
@@ -203,10 +203,49 @@
         </div>
       </div>
 
-      <!-- <h1 class="services__mobile">Our projects</h1> -->
     </section>
 
-    <!-- 
+    <section id="cost" class="cost wow fadeInUp" data-wow-delay="0.4s">
+      <h1 class="services__item_heading">Cost per unit</h1>
+      <p class="services__item_text">
+        Specify your requirements to a potential candidate to see the average rate
+      </p>
+      <div class="costWrap" id="calculator">
+        <div class="tabsWrap">
+          <div class="category">
+            <h4>Specialist type</h4>
+            <div class="tabsLine" data-target="0">
+              <a class="item" data-item="0">Front-end</a>
+              <a class="item active" data-item="1">Back-end</a>
+              <a class="item" data-item="2">Mobile developer</a>
+              <a class="item" data-item="3">UI/UX</a>
+            </div>
+          </div>
+          <div class="category">
+            <h4>Cognition level</h4>
+            <div class="tabsLine" data-target="1">
+              <a class="item" data-item="0">Junior</a>
+              <a class="item" data-item="1">Middle</a>
+              <a class="item active" data-item="2">Senior</a>
+            </div>
+          </div>
+          <div class="category">
+            <h4>Employment term</h4>
+            <div class="tabsLine" data-target="2">
+              <a class="item" data-item="0">1–3 months</a>
+              <a class="item" data-item="1">3–6 months</a>
+              <a class="item" data-item="2">6–12 months</a>
+              <a class="item active" data-item="3">1 year +</a>
+            </div>
+          </div>
+        </div>
+        <div class="rateWrap">
+          <h6>Average rate per employee</h6>
+          <p class="calculatedRate"><span id="calcRate">46</span>$</p>
+          <a href="#estimate-project" class="rateButton">Discuss partnership</a>
+        </div>
+      </div>
+    </section>
 
     <section id="barba-wrapper">
       <div class="barba-container" data-namespace="homepage">
@@ -224,22 +263,21 @@
                           Our projects
                         </h1>
                         <h3 class="projects__slide_heading">
-                          Project name 1
+                          Crypto Wallet
                         </h3>
-                        <span class="projects__slide_technology">Vue.js</span>
-                        <span class="projects__slide_technology">Node.js</span>
-                        <span class="projects__slide_technology">Javascript</span>
+                        <span class="projects__slide_technology">UX Design</span>
+                        <span class="projects__slide_technology">UI Design</span>
                         <p class="projects__slide_text">
-                          <b>Blockchain Platform</b> — Digital Assets Power
-                          Play
+                          <b>LightBase</b> — the best solution for storing, transferring and exchanging cryptocurrency
                         </p>
-                        <button class="projects__slide_button" onclick="window.location.href='/project.html'">
+                        <a class="projects__slide_button"
+                          href="https://www.behance.net/gallery/98464721/Light-Base-Crypto-Wallet" target="_blank">
                           <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 6.31568H12.5M12.5 6.31568L7.53636 1.32068M12.5 6.31568L7.53636 11.3107"
                               stroke="#0D0D0D" stroke-width="2" />
                           </svg>
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </li>
@@ -247,59 +285,96 @@
                     <div class="c-featured-work__content js-featured-work-stage-out">
                       <div class="projects__slide c-featured-work__content js-featured-work-stage-out">
                         <h3 class="projects__slide_heading">
-                          Project name 2
+                          Food Delivery App
                         </h3>
-                        <span class="projects__slide_technology">Vue.js</span>
-                        <span class="projects__slide_technology">Node.js</span>
-                        <span class="projects__slide_technology">Javascript</span>
+                        <span class="projects__slide_technology">UX Design</span>
+                        <span class="projects__slide_technology">UI Design</span>
                         <p class="projects__slide_text">
-                          <b>Blockchain Platform</b> — Digital Assets Power
-                          Play
+                          <b>Birds</b> — a food delivery agreggator that will make life easier
                         </p>
-                        <button class="projects__slide_button" onclick="window.location.href='/project.html'">
+                        <a class="projects__slide_button"
+                          href="https://www.behance.net/gallery/98191173/Birds-Food-Delivery" target="_blank">
                           <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 6.31568H12.5M12.5 6.31568L7.53636 1.32068M12.5 6.31568L7.53636 11.3107"
                               stroke="#0D0D0D" stroke-width="2" />
                           </svg>
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </li>
-                  <li class="c-featured-work__list-item js-featured-work-item js-featured-work-stage-out"
-                    style="padding-bottom: 0">
+                  <li class="c-featured-work__list-item js-featured-work-item js-featured-work-stage-out">
                     <div class="c-featured-work__content js-featured-work-stage-out">
                       <div class="projects__slide c-featured-work__content js-featured-work-stage-out">
                         <h3 class="projects__slide_heading">
-                          Project name 3
+                          Delivery platform
                         </h3>
+                        <span class="projects__slide_technology">Ruby on Rails</span>
                         <span class="projects__slide_technology">Vue.js</span>
-                        <span class="projects__slide_technology">Node.js</span>
-                        <span class="projects__slide_technology">Javascript</span>
                         <p class="projects__slide_text">
-                          <b>Blockchain Platform</b> — Digital Assets Power
-                          Play
-                        </p>
-                        <button class="projects__slide_button" onclick="window.location.href='/project.html'">
+                          <b>Mrsool</b> — is one of the largest delivery platform.</p>
+                        <a class="projects__slide_button" href="/project01.html" target="_blank">
                           <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 6.31568H12.5M12.5 6.31568L7.53636 1.32068M12.5 6.31568L7.53636 11.3107"
                               stroke="#0D0D0D" stroke-width="2" />
                           </svg>
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </li>
+                  <li class="c-featured-work__list-item js-featured-work-item js-featured-work-stage-out">
+                    <div class="c-featured-work__content js-featured-work-stage-out">
+                      <div class="projects__slide c-featured-work__content js-featured-work-stage-out">
+                        <h3 class="projects__slide_heading">
+                          Enterprise-grade event OS
+                        </h3>
+                        <span class="projects__slide_technology">Ruby on Rails</span>
+                        <span class="projects__slide_technology">Vue.js</span>
+                        <p class="projects__slide_text">
+                          <b>Herokey</b> — an enterprise grade, cloud based tool suite for large scale event management
+                        </p>
+                        <a class="projects__slide_button" href="/project02.html" target="_blank">
+                          <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 6.31568H12.5M12.5 6.31568L7.53636 1.32068M12.5 6.31568L7.53636 11.3107"
+                              stroke="#0D0D0D" stroke-width="2" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="c-featured-work__list-item js-featured-work-item js-featured-work-stage-out">
+                    <div class="c-featured-work__content js-featured-work-stage-out">
+                      <div class="projects__slide c-featured-work__content js-featured-work-stage-out">
+                        <h3 class="projects__slide_heading">
+                          Management software ecosystem
+                        </h3>
+                        <span class="projects__slide_technology">PostgreSQL</span>
+                        <span class="projects__slide_technology">Ruby on Rails</span>
+                        <p class="projects__slide_text">
+                          <b>WorkAxle</b> — happy to provide the best-of-breed workforce management software</p>
+                        <a class="projects__slide_button" href="/project03.html" target="_blank">
+                          <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 6.31568H12.5M12.5 6.31568L7.53636 1.32068M12.5 6.31568L7.53636 11.3107"
+                              stroke="#0D0D0D" stroke-width="2" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+
                 </ul>
 
                 <div class="c-featured-work__preview js-featured-work-preview" style="width: 45%!important;">
-                  <i class="c-featured-work__preview-mask" data-animation-set='{"x":"0"}'
+                  <i class="c-featured-work__preview-mask" data-animation-set='{"x":"50%"}'
                     data-animation='{"x":"100%", "ease":"Expo.easeInOut"}' data-animation-duration="0.8"
-                    data-animation-trigger="0.5" data-animation-reverse="true"></i>
+                    data-animation-trigger="0.1" data-animation-reverse="true"></i>
                   <div class="c-featured-work__preview-inner js-featured-work-preview-list">
                     <ul class="c-featured-work__preview-list js-preview-list" data-animation-set='{"opacity":"0"}'
-                      data-animation='{"opacity":"1", "ease":"Expo.easeInOut"}' data-animation-duration="0.4"
-                      data-animation-trigger="0.2" data-animation-reverse="true">
+                      data-animation='{"opacity":"1", "ease":"Expo.easeInOut"}' data-animation-duration="0.1"
+                      data-animation-trigger="0.1" data-animation-reverse="true">
                       <li class="c-featured-work__preview-list-item js-featured-work-preview-item"
                         data-next-bg-color="#393978">
                         <div class="c-featured-work__preview-image"
@@ -311,12 +386,22 @@
                         <div class="c-featured-work__preview-image"
                           style="background-image: url(./images/src/slider/h02.jpg);"></div>
                       </li>
-
                       <li class="c-featured-work__preview-list-item js-featured-work-preview-item"
-                        data-next-bg-color="#030627">
+                        data-next-bg-color="#45287a">
                         <div class="c-featured-work__preview-image"
-                          style="background-image: url(./images/src/slider/h03.jpg);"></div>
+                          style="background-image: url(./images/src/slider/pd01.jpg);"></div>
                       </li>
+                      <li class="c-featured-work__preview-list-item js-featured-work-preview-item"
+                        data-next-bg-color="#45287a">
+                        <div class="c-featured-work__preview-image"
+                          style="background-image: url(./images/src/slider/pd02.jpg);"></div>
+                      </li>
+                      <li class="c-featured-work__preview-list-item js-featured-work-preview-item"
+                        data-next-bg-color="#45287a">
+                        <div class="c-featured-work__preview-image"
+                          style="background-image: url(./images/src/slider/pd03.jpg);"></div>
+                      </li>
+
                     </ul>
                   </div>
                 </div>
@@ -332,53 +417,83 @@
     <section class="projects__mobile" id="projects-mobile">
       <div class="projects__mobile_item">
         <img class="projects__mobile_img" src="images/src/slider/h01.jpg" alt="" />
-        <h1 class="projects__slide_heading">Project name 1</h1>
-        <span class="projects__slide_technology">Vue.js</span>
-        <span class="projects__slide_technology">Node.js</span>
-        <span class="projects__slide_technology">Javascript</span>
+        <h1 class="projects__slide_heading">Crypto Wallet</h1>
+        <span class="projects__slide_technology">UX Design</span>
+        <span class="projects__slide_technology">UI Design</span>
         <p class="projects__slide_text">
-          <b>Blockchain Platform</b> — Digital Assets Power Play
+          <b>LightBase</b> — the best solution for storing, transferring and exchanging cryptocurrency
         </p>
-        <button class="projects__slide_button" onclick="window.location.href='/project.html'">
+        <a class="projects__slide_button" href="https://www.behance.net/gallery/98464721/Light-Base-Crypto-Wallet"
+          target="_blank">
           <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 6.31568H12.5M12.5 6.31568L7.53636 1.32068M12.5 6.31568L7.53636 11.3107" stroke="#0D0D0D"
               stroke-width="2" />
           </svg>
-        </button>
+        </a>
       </div>
       <div class="projects__mobile_item">
         <img class="projects__mobile_img" src="images/src/slider/h02.jpg" alt="" />
-        <h1 class="projects__slide_heading">Project name 2</h1>
-        <span class="projects__slide_technology">Vue.js</span>
-        <span class="projects__slide_technology">Node.js</span>
-        <span class="projects__slide_technology">Javascript</span>
+        <h1 class="projects__slide_heading">Food Delivery App</h1>
+        <span class="projects__slide_technology">UX Design</span>
+        <span class="projects__slide_technology">UI Design</span>
         <p class="projects__slide_text">
-          <b>Blockchain Platform</b> — Digital Assets Power Play
+          <b>Birds</b> — a food delivery agreggator that will make life easier
         </p>
-        <button class="projects__slide_button" onclick="window.location.href='/project.html'">
+        <a class="projects__slide_button" href="https://www.behance.net/gallery/98191173/Birds-Food-Delivery"
+          target="_blank">
           <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 6.31568H12.5M12.5 6.31568L7.53636 1.32068M12.5 6.31568L7.53636 11.3107" stroke="#0D0D0D"
               stroke-width="2" />
           </svg>
-        </button>
+        </a>
       </div>
       <div class="projects__mobile_item">
-        <img class="projects__mobile_img" src="images/src/slider/h03.jpg" alt="" />
-        <h1 class="projects__slide_heading">Project name 3</h1>
+        <img class="projects__mobile_img" src="images/src/slider/p01.jpg" alt="" />
+        <h1 class="projects__slide_heading">Delivery platform</h1>
+        <span class="projects__slide_technology">Ruby on Rails</span>
         <span class="projects__slide_technology">Vue.js</span>
-        <span class="projects__slide_technology">Node.js</span>
-        <span class="projects__slide_technology">Javascript</span>
         <p class="projects__slide_text">
-          <b>Blockchain Platform</b> — Digital Assets Power Play
+          <b>Mrsool</b> — is one of the largest delivery platform.
         </p>
-        <button class="projects__slide_button" onclick="window.location.href='/project.html'">
+        <a class="projects__slide_button" href="/project01.html" target="_blank">
           <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 6.31568H12.5M12.5 6.31568L7.53636 1.32068M12.5 6.31568L7.53636 11.3107" stroke="#0D0D0D"
               stroke-width="2" />
           </svg>
-        </button>
+        </a>
       </div>
-    </section> -->
+      <div class="projects__mobile_item">
+        <img class="projects__mobile_img" src="images/src/slider/p02.jpg" alt="" />
+        <h1 class="projects__slide_heading">Enterprise-grade event OS</h1>
+        <span class="projects__slide_technology">Ruby on Rails</span>
+        <span class="projects__slide_technology">Vue.js</span>
+        <p class="projects__slide_text">
+          <b>Herokey</b> — an enterprise grade, cloud based tool suite for large scale event management
+        </p>
+        <a class="projects__slide_button" href="/project02.html" target="_blank">
+          <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 6.31568H12.5M12.5 6.31568L7.53636 1.32068M12.5 6.31568L7.53636 11.3107" stroke="#0D0D0D"
+              stroke-width="2" />
+          </svg>
+        </a>
+      </div>
+      <div class="projects__mobile_item">
+        <img class="projects__mobile_img" src="images/src/slider/p03.jpg" alt="" />
+        <h1 class="projects__slide_heading">Management software ecosystem</h1>
+        <span class="projects__slide_technology">PostgreSQL</span>
+        <span class="projects__slide_technology">Ruby on Rails</span>
+        <p class="projects__slide_text">
+          <b>WorkAxle</b> — happy to provide the best-of-breed workforce management software
+        </p>
+        <a class="projects__slide_button" href="/project03.html" target="_blank">
+          <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 6.31568H12.5M12.5 6.31568L7.53636 1.32068M12.5 6.31568L7.53636 11.3107" stroke="#0D0D0D"
+              stroke-width="2" />
+          </svg>
+        </a>
+      </div>
+
+    </section>
 
 
 
@@ -496,7 +611,7 @@
       <!--        <span class="footer__copyright">Privacy Policy</span>-->
     </div>
   </footer>
-  <script src="js/main.min.js?v1"></script>
+  <script src="js/main.min.js?v6"></script>
 </body>
 
 </html>

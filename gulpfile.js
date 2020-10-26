@@ -21,7 +21,7 @@ const del = require("del");
 const browsersync = () => {
   browserSync.init({
     server: { baseDir: "app" },
-    notify: false
+    notify: false,
     // online: false, // Work offline without internet connection
   });
 };
@@ -58,7 +58,7 @@ const browsersync = () => {
 // ];
 
 // CSS
-let genStyles = pageName => {
+let genStyles = (pageName) => {
   return src("app/" + preprocessor + `/${pageName}/${pageName}.*`)
     .pipe(eval(preprocessor)())
     .pipe(concat(`${pageName}.min.css`))
@@ -87,9 +87,9 @@ const scripts = () => {
   return src([
     "app/libs/jquery/jquery-3.4.1.min.js",
     "app/libs/wow/wow.min.js",
-    // "app/libs/scrollWorks/e054e.js",
-    // "app/libs/scrollWorks/a9b30.js",
-    "app/js/index.js"
+    "app/libs/scrollWorks/e054e.js",
+    "app/libs/scrollWorks/a9b30.js",
+    "app/js/index.js",
   ])
     .pipe(concat(`main.min.js`))
     .pipe(uglify()) // Minify JS (opt.)

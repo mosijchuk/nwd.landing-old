@@ -1,17 +1,35 @@
+// @font-face {
+//   font-family: "SFProDisplay";
+//   src: url("./../fonts/SFProDisplay.ttf");
+// }
+
+// @font-face {
+//   font-family: "SFProDisplay";
+//   src: url("./../fonts/SFProDisplay-Bold.ttf");
+//   font-weight: bold;
+// }
+
+// @font-face {
+//   font-family: "SFProDisplay";
+//   src: url("./../fonts/SFProDisplay-Light.ttf");
+//   font-weight: 300;
+// }
+
+// new font
 @font-face {
-  font-family: "SFProDisplay";
-  src: url("./../fonts/SFProDisplay.ttf");
+  font-family: "ProphetTrial";
+  src: url("./../fonts/Prophet/ProphetTrial-Regular.otf");
 }
 
 @font-face {
-  font-family: "SFProDisplay";
-  src: url("./../fonts/SFProDisplay-Bold.ttf");
+  font-family: "ProphetTrial";
+  src: url("./../fonts/Prophet/ProphetTrial-Bold.otf");
   font-weight: bold;
 }
 
 @font-face {
-  font-family: "SFProDisplay";
-  src: url("./../fonts/SFProDisplay-Light.ttf");
+  font-family: "ProphetTrial";
+  src: url("./../fonts/Prophet/ProphetTrial-Light.otf");
   font-weight: 300;
 }
 
@@ -45,7 +63,7 @@ h6 {
   margin: 0;
   padding: 0;
   border-width: 0;
-  font-family: "SFProDisplay", sans-serif;
+  font-family: "ProphetTrial", sans-serif;
   line-height: inherit;
   color: #0d0d0d;
 }
