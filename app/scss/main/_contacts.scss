@@ -11,7 +11,12 @@
       display: block;
       text-decoration: none;
       width: fit-content;
+      margin-bottom: 20px;
       transition: 0.5s;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
 
       &::after {
         position: absolute;
@@ -24,11 +29,6 @@
         transition: transform 0.5s;
         transform: scaleX(0);
         transform-origin: right;
-      }
-
-      &:nth-child(2),
-      &:nth-child(3) {
-        padding-top: 20px;
       }
 
       &:hover {

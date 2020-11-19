@@ -247,3 +247,130 @@ $("#calculator .tabsLine a.item").click(function (e) {
 $("#calculator .rateButton").click(function () {
   formCalcVal();
 });
+
+// fb
+$(document).on("click", ".close-btn", function (e) {
+  e.preventDefault();
+  javascript: parent.$.fancybox.close();
+});
+$.fancybox.defaults.hideScrollbar = false;
+
+$("a[data-fancybox]").fancybox({
+  padding: 0,
+  buttons: [],
+  animationEffect: "slide-in-out",
+  clickSlide: "false",
+  touch: false,
+  backFocus: false,
+  iframe: {
+    preload: true,
+  },
+  helpers: {
+    overlay: {
+      locked: false,
+    },
+  },
+  defaults: {
+    hideScrollbar: false,
+  },
+});
+// end fb
+
+// sm
+const getElemHeight = (elem) => $(elem).height();
+
+let scrollMagicController = new ScrollMagic.Controller();
+
+window.onresize = () => {
+  if ($(window).width() > 1024) {
+    document.location.reload();
+  }
+};
+
+const sm = () => {
+  const w = $(window).width();
+
+  if (w > 1024) {
+    const projectInfo = document.getElementsByClassName("portfolio__list-item");
+    const portfolioPreview = $(".portfolio__preview");
+    const coverItemSel = "portfolio__preview-list-item";
+    const worksWrapSel = "#worksWrap";
+    const covers = document.getElementsByClassName(coverItemSel);
+
+    const fixCovrs = new ScrollMagic.Scene({
+      triggerElement: worksWrapSel,
+      triggerHook: 0,
+      duration:
+        getElemHeight(worksWrapSel) - getElemHeight(".portfolio__preview-list"),
+    })
+      .on("start", function (ev) {
+        if (ev.scrollDirection == "FORWARD") {
+          !portfolioPreview.hasClass("coversFixed") &&
+            portfolioPreview.addClass("coversFixed");
+        }
+        if (ev.scrollDirection == "REVERSE") {
+          portfolioPreview.hasClass("coversFixed") &&
+            portfolioPreview.removeClass("coversFixed");
+        }
+      })
+      .on("end", function (ev) {
+        if (ev.scrollDirection == "FORWARD") {
+          !portfolioPreview.hasClass("coversBottom") &&
+            portfolioPreview.addClass("coversBottom");
+        }
+        if (ev.scrollDirection == "REVERSE") {
+          portfolioPreview.hasClass("coversBottom") &&
+            portfolioPreview.removeClass("coversBottom");
+        }
+      })
+      .addTo(scrollMagicController);
+
+    for (let i = 0; i < covers.length; i++) {
+      let cover = covers[i];
+      cover.style.zIndex = i + 100;
+    }
+
+    const coverProgress = (val, i) => {
+      TweenMax.to($(`.${coverItemSel}:nth-child(${i})`), 0.5, {
+        transform: "translate3d(" + (100 - val * 100) + "%,0,0)",
+      });
+    };
+
+    for (let i = 0; i < projectInfo.length; i++) {
+      var project = projectInfo[i],
+        projectFadeIn = TweenMax.to(project, 0.5, {
+          css: { opacity: 1 },
+        }),
+        projectFadeOut = TweenMax.to(project, 0.5, {
+          css: { opacity: 0 },
+        });
+
+      project.setAttribute("num", i);
+
+      const fadeIn = new ScrollMagic.Scene({
+        triggerElement: project,
+        triggerHook: 0.8,
+        duration: 300,
+      })
+        .setTween(projectFadeIn)
+        .on("progress", function (ev) {
+          coverProgress(
+            ev.progress,
+            +$(ev.target.triggerElement()).attr("num") + 1
+          );
+        })
+        .addTo(scrollMagicController);
+
+      const fadeOut = new ScrollMagic.Scene({
+        triggerElement: project,
+        triggerHook: 0.2,
+        duration: 300,
+      })
+        .setTween(projectFadeOut)
+        .addTo(scrollMagicController);
+    }
+  }
+};
+
+$(document).ready(sm);
+//end sm

@@ -86,9 +86,12 @@ let projectStyles = () => {
 const scripts = () => {
   return src([
     "app/libs/jquery/jquery-3.4.1.min.js",
+    "app/libs/gsap/gsap.min.js",
+    "app/libs/scrollMagic/ScrollMagic.js",
+    "app/libs/scrollMagic/plugins/jquery.ScrollMagic.js",
+    "app/libs/scrollMagic/plugins/animation.gsap.js",
     "app/libs/wow/wow.min.js",
-    "app/libs/scrollWorks/e054e.js",
-    "app/libs/scrollWorks/a9b30.js",
+    "app/libs/fancybox/jquery.fancybox.min.js",
     "app/js/index.js",
   ])
     .pipe(concat(`main.min.js`))
